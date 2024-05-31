@@ -1,0 +1,293 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oranienbaum',
+      Arial, Helvetica, sans-serif;
+}
+
+
+header {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#chat-messages {
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.user-message {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.bot-message {
+  background-color: #9e4caf;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.user-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.user-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.user-input button {
+  background-color: #9e4caf;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-input button:hover {
+  background-color: #873b9e;
+}
+
+#container {
+  position: fixed;
+  bottom: 20px; /* Distância do retângulo em relação à parte inferior da janela */
+  right: 20px; /* Distância do retângulo em relação à parte direita da janela */
+  width: 100px; /* Largura do retângulo */
+  height: 50px; /* Altura do retângulo */
+  background-color: #9e4caf; /* Cor de fundo roxo */
+  border-radius: 10px; /* Raio das bordas do retângulo */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+  animation: containerAnimation 3s infinite alternate ease-in-out; /* Animação de flutuação */
+}
+
+@keyframes containerAnimation {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px); /* Altere o valor para ajustar a altura da flutuação */
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(126, 104, 255));
+  height: 120vh;
+  align-items: center;
+  justify-content: center;
+ 
+}
+/* Definindo a animação */
+@keyframes floating {
+  0% {
+        transform: translateY(0);
+  }
+  50% {
+        transform: translateY(-10px); /* Altere o valor para ajustar a altura da flutuação */
+  }
+  100% {
+        transform: translateY(0);
+      }
+}
+
+
+.question {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 10px 0;
+margin-top: 20px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.balao2{
+  background: #f1d3ff;
+  border-radius: 15px;
+  width: 400px;
+  height: 60px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 7px 5px, rgba(0, 0, 0, 0.09) 0px 5px 10px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 5px 20px, rgba(0, 0, 0, 0.09) 0px 10px 10px;
+}
+h2{
+  font-size: 13px;
+  justify-content: center;
+  color:#000000;
+  margin-top: 10px;
+  margin-left: 80px;
+}
+
+h3{
+  font-size: 15px;
+  justify-content: center;
+  color:#0f0f0f;
+  margin-left: 70px;
+}
+.balao2:after{
+
+  content: "";
+
+  width: 0;
+  height: 0;
+
+  position: absolute;
+  border-right: 30px solid transparent;
+  border-top: 7px #f1d3ff solid ;
+  bottom: -7px;
+  left: 5%;
+}
+
+
+
+
+.question input,
+.question .answer { display: none }
+
+
+
+.question input,
+.question .answer-1 { display: none }
+
+.question label {
+  display: flex;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 5px;
+  width: 20%;
+  align-items: center;
+  white-space: nowrap;
+  
+}
+
+.answer li{
+  margin-top: 10px;
+  list-style-type: none;
+  width: 500px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.answer-1 li{
+  margin-top: 10px;
+  list-style-type: none;
+  width: 500px;
+  margin-left: 400px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#robot-icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#robot-icon i {
+  font-size: 45px;
+  
+  margin-right: 10px;
+  color: #6b6b6b;
+}
+
+.question input:checked ~ .answer {
+  display: block
+}
+
+.question input:checked ~ .answer-1 {
+  display: block
+}
+#button {
+  background-color: #ffffff;
+  height: 30%;
+  width: 60%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; 
+  border: none;
+  padding: 10px 12px;
+  border-radius: 20px 20px 20px 20px;
+  cursor: pointer;
+  transform: translateX(0) scale(1.1); /* Initial transformation */
+}
+
+#button:hover {
+  transform: translateX(0) scale(1.2); /* Apply transformation on hover */
+  transition: transform 0.4s; /* Apply transition effect */
+}
+#message-button{
+  background-color: #ffffff;
+  display: inline-block;
+  height: 8%;
+  margin-top: 130px;
+  margin-left: 8%;
+  width: 85%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; 
+  border: none;
+  padding: 10px 12px;
+  border-radius: 20px 20px 20px 20px;
+  cursor: pointer;
+  transform: translateX(0) scale(1.1); /* Initial transformation */
+}
+
+
+input[type="text"] {
+  width: calc(100% - 60px);
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.card-container{
+  margin-top: 10%;
+  transition: 0.3s;
+  width: 40vw;
+  height: 90vh;
+  margin-left: 30%;
+  background-color: rgb(255, 255, 255);
+  animation-name: floating;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 70px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    animation-duration: 3s; /* Duração da animação */
+    animation-iteration-count: infinite; /* Repetição infinita */
+    animation-timing-function: ease-in-out; /* Curva de animação */
+   
+    border-radius: 10px;
+    overflow: hidden;
+   
+}
+
+ 
+      /* Definindo a animação */
+      @keyframes floating {
+        0% {
+              transform: translateY(0);
+        }
+        50% {
+              transform: translateY(-10px); /* Altere o valor para ajustar a altura da flutuação */
+        }
+        100% {
+              transform: translateY(0);
+            }
+  
+}

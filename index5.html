@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="style5.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/natural/0.6.4/natural.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="card-container">
+    <div id="robot-icon">
+      <i class="fas fa-robot"></i>
+      <div class="balao2"><span><h2>Olá!Bem-vinda ao seu amparo digital! </h2>
+      <h3>Tire dúvidas ou busque ajuda aqui!</h3></span></div>
+  </div>
+    <div class='question'>
+        <input type='checkbox' id='question-1'>
+        <button id="button"> <label for='question-1'>Quais são os tipos de violência?</label></button>
+        <div class='answer'>
+          
+          <li>Patrimonial:O agressor destrói de modo parcial ou total objetos de valor, documentos, instrumentos de trabalho e bens materiais, causando danos para a vítima. </li>
+          <li>Psicológica:A mulher sente-se diminuída e constrangida através de atos e palavras do agressor para mantê-la, tendo também seu estilo de vida passa a ser controlado. </li>
+          <li>Moral: Qualquer conduta que importe em calúnia, quando o agressor afirma falsamente que aquela praticou crime que ela não cometeu;</li>
+          <li>Física:O agressor ofende a saúde corporal da mulher, com atos de agressão, por meio de socos, chutes, facada, estrangulamento, enforcamento. </li>
+          <li>Sexual:É o ato de constranger alguém com gestos, prevalecendo-se de relações de confiança ,de autoridade ou de relação de emprego , com o objetivo de obter vantagem sexual.</li>
+        </div>
+    </div>
+     
+      <div class='question'>
+        <input type='checkbox' id='question-2'>
+        <button id="button"><label for='question-2'>Como saber se estou sofrendo violência?</label></button>
+        <div class='answer'>
+          <li>Ela sente-se envergonhada ou humilhada. ...</li>
+          <li>Teme pela sua segurança pessoal e pela segurança de seus filhos e filhas. ...</li>
+          <li>Sente que não tem controle sobre o que acontece na sua vida. ...</li>
+            Crê que suas lesões e problemas não são importantes.
+        </div>
+      </div>
+      <div class='question'>
+        <input type='checkbox' id='question-3'>
+        <button id="button"><label for='question-3'>Como saber se estou sofrendo assédio?</label></button>
+        <div class='answer'>
+          <li>Piadas ofensivas, intimidadoras ou incômodas.</li>
+          <li>Observações humilhantes. Xingamentos, apelidos ofensivos ou calúnias.</li>
+          <li>Apalpar o corpo da mulher, sem seu consentimento;</li>
+        </div>
+      </div>
+      <div class='question'>
+        <input type='checkbox' id='question-4'>
+        <button id="button"><label for='question-4'>Número de Emergência</label></button>
+        <div class='answer-1'>
+          
+          <li>190.-Policia</li>
+          <li>199.-Defesa Civil</li>
+          <li>192.-SAMU</li>
+          <li>180-Delegacia da Mulher</li>
+          <li>193-Bombeiros</li>
+        </div>
+      </div>
+      <div id="chat-messages"></div>
+        <div class="user-input">
+    
+          <input type="text" id="message" placeholder="Digite sua mensagem">
+          <button id="send-btn" onclick="enviarMensagem()">Enviar</button>
+        </div>
+      </div>
+  </div>
+<!-- 
+  <div class="chat-container">
+    <div class="chat-box" id="chat-box">
+      <div class="chat-message">Bot: Olá! Como posso ajudá-lo?</div>
+    </div>
+    <input type="text" id="user-input" placeholder="Digite sua mensagem..."> 
+    <button onclick="sendMessage()">Enviar</button>
+  </div> -->
+  
+  <script src="script5.js"></script>
+</body>
+</html>

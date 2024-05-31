@@ -1,0 +1,114 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, rgb(255, 85, 204), rgb(140, 0, 255), rgb(126, 104, 255));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#chat-container {
+    animation-name: floating;
+    animation-duration: 3s; /* Duração da animação */
+    animation-iteration-count: infinite; /* Repetição infinita */
+    animation-timing-function: ease-in-out; /* Curva de animação */
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+ 
+      /* Definindo a animação */
+      @keyframes floating {
+        0% {
+              transform: translateY(0);
+        }
+        50% {
+              transform: translateY(-10px); /* Altere o valor para ajustar a altura da flutuação */
+        }
+        100% {
+              transform: translateY(0);
+            }
+    }
+    
+
+#chat-header {
+    background-color: #9e4caf;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#chat-header i {
+    margin-right: 5px;
+}
+
+#chat-messages {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.message {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.user {
+    text-align: right;
+}
+
+.bot {
+    text-align: left;
+}
+
+.message-text {
+    display: inline-block;
+    max-width: 70%;
+    padding: 8px;
+    border-radius: 10px;
+    word-wrap: break-word;
+}
+
+.user .message-text {
+    background-color: rgb(167, 76, 175);
+    color: #fff;
+}
+
+.bot .message-text {
+    background-color: #ddd;
+    color: #333;
+}
+
+#user-input {
+    display: flex;
+    padding: 10px;
+    background-color: #eee;
+}
+
+#user-message {
+    flex: 1;
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#send-button {
+    background-color: #8800a3;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+}

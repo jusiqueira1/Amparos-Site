@@ -1,0 +1,83 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #023047;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #b100dd;
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 7px;
+    padding: 40px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    gap: 5px;
+}
+
+.formLogin h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.3em;
+}
+
+.formLogin input {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 80px;
+    transition: all linear 160ms;
+    outline: none;
+}
+
+#saveLogin {
+    display: none;
+}
+
+#saveLogin:checked + .formLogin #email,
+#saveLogin:checked + .formLogin #senha {
+    background-color: #e1e1e1;
+}
+
+#saveLogin + label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all linear 160ms;
+}
+
+#saveLogin:checked + label {
+    color: #000000;
+}
+
+.btn {
+    background-color: #bd02c4;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+    margin-left:20px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #860097;
+}

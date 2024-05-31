@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <div class="left"></div>
+    <div class="center">
+        <p class="urgent-message">Acione o botão do pânico para casos urgentes:</p>
+        <button id="panic-button" onclick="triggerPanic()">
+            <img src="Captura de Tela (28).png" alt="Sirene">
+        </button>
+        <div class="buttons-container">
+            <div class="button1"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+        </div>
+    </div>
+    <div class="right"></div>
+
+    <script>
+        function triggerPanic() {
+            // Adicione aqui a lógica para encaminhar para o contato da polícia ou outra ação de emergência
+            alert("Botão do Pânico acionado! Contato da polícia encaminhado.");
+        }
+    </script>
+</body>
+</html>
+
